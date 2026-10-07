@@ -1,0 +1,6 @@
+{
+  "name": "AluFort Sistemas de Alumínio",
+  "description": "Sistema avançado para gestão e controle de estoque de esquadrias e perfis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

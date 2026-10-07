@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Esconder tudo exceto a área de etiquetas na impressão */
+  header, nav, footer, button, .no-print {
+    display: none !important;
+  }
+
+  .etiqueta-termica {
+    break-inside: avoid;
+    page-break-after: always;
+    margin: 0 auto 10mm auto !important;
+    box-shadow: none !important;
+    border: 2px solid black !important;
+  }
+}

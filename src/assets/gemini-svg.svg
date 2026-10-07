@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de Fundo Ocean -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2542"/>
+      <stop offset="100%" stop-color="#0B1E36"/>
+    </linearGradient>
+
+    <!-- Gradiente Alumínio / Ciano -->
+    <linearGradient id="cyanAlu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C3E3"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+
+    <!-- Gradiente Vidro / Reflexo -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4D8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2A4365" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Brilho Ciano Neon -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo com cantos arredondados -->
+  <rect width="512" height="512" rx="108" fill="url(#bgGrad)"/>
+  <rect width="508" height="508" x="2" y="2" rx="106" fill="none" stroke="#2A4365" stroke-width="4"/>
+
+  <!-- Moldura Externa da Esquadria -->
+  <rect x="86" y="86" width="340" height="340" rx="32" fill="#152A4A" stroke="#2A4365" stroke-width="12"/>
+
+  <!-- Painéis de Vidro Internos (Reflexo) -->
+  <rect x="106" y="106" width="140" height="140" rx="16" fill="url(#glassGrad)"/>
+  <rect x="266" y="106" width="140" height="140" rx="16" fill="url(#glassGrad)"/>
+  <rect x="106" y="266" width="140" height="140" rx="16" fill="url(#glassGrad)"/>
+  <rect x="266" y="266" width="140" height="140" rx="16" fill="url(#glassGrad)"/>
+
+  <!-- Reflexo angular de luz na vidraça -->
+  <path d="M 120 106 L 246 106 L 106 246 L 106 120 Z" fill="#FFFFFF" opacity="0.08"/>
+  <path d="M 280 106 L 406 106 L 106 406 L 106 280 Z" fill="#FFFFFF" opacity="0.04"/>
+
+  <!-- Perfil Estrutural Central em Formato de "A" de ALUFORTE -->
+  <!-- Coluna Diagonal Esquerda -->
+  <path d="M 256 120 L 140 376 L 180 376 L 256 208 L 332 376 L 372 376 Z" 
+        fill="url(#cyanAlu)" filter="url(#glow)"/>
+
+  <!-- Travessa da Esquadria (Corte de Perfil 45°) -->
+  <rect x="180" y="278" width="152" height="26" rx="6" fill="#FFFFFF"/>
+
+  <!-- Núcleo de Montagem / Rebite Guia -->
+  <circle cx="256" cy="180" r="10" fill="#0B1E36"/>
+  <circle cx="256" cy="180" r="6" fill="#22C3E3"/>
+</svg>
